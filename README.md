@@ -1,3 +1,11 @@
+## Deploy
+
+The project is available online at the link:
+
+🔗 **Acesse aqui:** https://codeleap-test-g20o.onrender.com/
+
+The deployment was carried out using **Render** from this repository.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
