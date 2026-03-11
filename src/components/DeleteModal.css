@@ -1,0 +1,111 @@
+.delete-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.delete-modal {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 540px;
+  max-width: 90vw;
+}
+
+.delete-modal p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.delete-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.btn-cancel {
+  padding: 8px 24px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-delete {
+  padding: 8px 24px;
+  background-color: #FF5151;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .delete-modal {
+    padding: 20px;
+  }
+
+  .delete-modal p {
+    font-size: 16px;
+  }
+
+  .delete-footer {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-delete {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* ── Animations ── */
+.delete-backdrop {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.delete-modal {
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-cancel {
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-delete {
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #cc3333;
+}

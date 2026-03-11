@@ -1,0 +1,159 @@
+.app {
+  min-height: 100vh;
+  background-color: #dddddd;
+}
+
+.header {
+  background-color: #7695EC;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+}
+
+.create-post {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.create-post-heading {
+  padding: 24px 24px 0;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.create-post-form {
+  padding: 0 24px 24px;
+}
+
+.create-post-form label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.create-post-form input,
+.create-post-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  margin-bottom: 16px;
+}
+
+.create-post-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.create-post-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.btn-create {
+  padding: 8px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-create:not(:disabled) {
+  background-color: #7695EC;
+  cursor: pointer;
+}
+
+.btn-create:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .header-content {
+    padding: 0 16px;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 16px 16px 48px;
+  }
+
+  .create-post-heading {
+    padding: 16px 16px 0;
+    font-size: 18px;
+  }
+
+  .create-post-form {
+    padding: 0 16px 16px;
+  }
+
+  .btn-create {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .create-post-footer {
+    margin-top: 8px;
+  }
+}
+
+/* ── Animations ── */
+.create-post {
+  transition: box-shadow 0.2s;
+}
+
+.create-post:focus-within {
+  box-shadow: 0 4px 16px rgba(118, 149, 236, 0.2);
+}
+
+.create-post-form input:focus,
+.create-post-form textarea:focus {
+  outline: none;
+  border-color: #7695EC;
+  transition: border-color 0.2s;
+}
+
+.btn-create:not(:disabled):hover {
+  background-color: #5a7fd4;
+  transition: background-color 0.2s;
+}
+
+.btn-create {
+  transition: background-color 0.2s;
+}

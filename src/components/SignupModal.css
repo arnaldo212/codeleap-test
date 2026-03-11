@@ -1,0 +1,120 @@
+.signup-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.signup-modal {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 500px;
+  max-width: 90vw;
+}
+
+.signup-modal h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.signup-modal p {
+  margin-bottom: 8px;
+}
+
+.signup-modal input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.signup-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.btn-enter {
+  padding: 8px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-enter:not(:disabled) {
+  background-color: #7695EC;
+  cursor: pointer;
+}
+
+.btn-enter:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .signup-modal {
+    padding: 20px;
+  }
+
+  .signup-modal h2 {
+    font-size: 18px;
+  }
+
+  .btn-enter {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .signup-footer {
+    margin-top: 16px;
+  }
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.signup-backdrop {
+  animation: fadeIn 0.2s ease;
+}
+
+.signup-modal {
+  animation: slideDown 0.25s ease;
+}
+
+.signup-modal input:focus {
+  outline: none;
+  border-color: #7695EC;
+  transition: border-color 0.2s;
+}
+
+.btn-enter:not(:disabled):hover {
+  background-color: #5a7fd4;
+  transition: background-color 0.2s;
+}
+
+.btn-enter {
+  transition: background-color 0.2s;
+}

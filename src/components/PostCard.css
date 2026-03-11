@@ -1,0 +1,151 @@
+.post-card {
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+
+.post-card-header {
+  background-color: #7695EC;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.post-card-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.post-card-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.post-card-body {
+  padding: 16px 24px;
+}
+
+.post-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.post-card-username {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.post-card-time {
+  color: #777;
+  font-size: 14px;
+}
+
+.post-card-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.post-card-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.btn-like {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+  color: #777;
+  cursor: pointer;
+}
+
+.btn-like--active {
+  color: #e0245e;
+  border-color: #e0245e;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .post-card-header {
+    padding: 12px 16px;
+  }
+
+  .post-card-title {
+    font-size: 16px;
+  }
+
+  .post-card-body {
+    padding: 12px 16px;
+  }
+}
+
+/* ── Animations ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-card {
+  animation: fadeInUp 0.3s ease;
+  transition: box-shadow 0.2s;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-actions button {
+  transition: transform 0.15s;
+}
+
+.post-card-actions button:hover {
+  transform: scale(1.2);
+}
+
+.btn-like {
+  transition: color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.btn-like:hover {
+  border-color: #e0245e;
+  color: #e0245e;
+  transform: scale(1.05);
+}
+
+.btn-like--active {
+  animation: pop 0.2s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
